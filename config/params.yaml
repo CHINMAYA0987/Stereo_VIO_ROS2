@@ -1,0 +1,51 @@
+stereo_vio_node:
+  ros__parameters:
+    imu_topic: "/imu0"
+    left_image_topic: "/cam0/image_raw"
+    right_image_topic: "/cam1/image_raw"
+    odom_topic: "/stereo_vio/odom"
+    path_topic: "/stereo_vio/path"
+    cam0_intrinsics: [458.654, 457.296, 367.215, 248.375]
+    cam0_distortion_coeffs: [-0.28340811, 0.07395907, 0.00019359, 1.76187114e-05]
+    cam1_intrinsics: [457.587, 456.134, 379.999, 255.238]
+    cam1_distortion_coeffs: [-0.28368365,  0.07451284, -0.00010473, -3.55590700e-05]
+    T_cam1_cam0_rotation: [0.999997256, -0.000231206720, 0.00235487018, 0.000231749009, 0.999999536, -0.0000899095248, -0.00235465490, 0.0000899209981, 0.999997219]
+    T_cam1_cam0_translation: [-0.11007381, 0.00015880, 0.00017887]
+    T_cam0_imu_rotation: [0.01480757, -0.99985963, -0.00740246, -0.00209245, 0.00739723, -0.99997005, 0.99988699, 0.01481896, -0.00198351]
+    T_cam0_imu_translation: [-0.00692820, 0.01445325, -0.00403378]
+    gyro_noise_density: 1.6968e-04
+    gyro_random_walk: 1.9393e-05 
+    accel_noise_density: 2.0000e-3
+    accel_random_walk: 3.0000e-3
+    init_cov_rot: 0.01
+    init_cov_vel: 0.1
+    init_cov_pos: 0.0001
+    init_cov_bg: 0.000001
+    init_cov_ba: 0.01
+    eskf.init_duration: 3.0
+    max_features: 150
+    min_feature_dist: 20
+    fast_threshold: 20
+    klt_win_size: 21
+    klt_max_level: 3
+    klt_epsilon: 0.01
+    ransac_threshold: 2.0
+    min_track_length: 3
+    reproj_error_thresh: 3.0
+    min_depth: 0.1
+    max_depth: 50.0
+    gravity: 9.81
+    publish_tf: true
+    world_frame_id: "world"
+    body_frame_id: "body"
+    camera_frame_id: "cam0"
+    fb_error_threshold: 2.0
+    stereo_row_threshold: 1.5
+    image_noise: 3.0
+    chi2_threshold: 0.05
+    use_direct_pnp_fusion: true
+    direct_pnp_alpha: 1.0
+    max_pnp_step_m: 1.0
+    max_pnp_step_rad: 0.6
+    pnp_assoc_reproj_thresh: 12.0
+    pnp_reproj_accept_thresh: 3.0
